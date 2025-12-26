@@ -232,7 +232,7 @@ shareFacebook.addEventListener('click', (e) => {
 
 shareTwitter.addEventListener('click', (e) => {
     e.preventDefault();
-    const tweetText = `Leve na Marmita - Comida caseira e saudável!`;
+    const tweetText = `🌱 ${pageTitle} - Alimentação saudável e caseira! 💚`;
     const twitterURL = `https://twitter.com/intent/tweet?url=${encodeURIComponent(currentURL)}&text=${encodeURIComponent(tweetText)}`;
     window.open(twitterURL, '_blank');
 });
