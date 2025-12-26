@@ -1,0 +1,773 @@
+/*
+* littlelink.io
+* Skeleton V2.0.4
+* Copyright 2014, Dave Gamache
+* www.getskeleton.com
+* Free to use under the MIT license.
+* http://www.opensource.org/licenses/mit-license.php
+* 12/29/2014
+*/
+
+/*
+* Built using on:
+* Skeleton V2.0.4
+* Copyright 2014, Dave Gamache
+* www.getskeleton.com
+* Free to use under the MIT license.
+* http://www.opensource.org/licenses/mit-license.php
+* 12/29/2014
+*/
+
+/* Table of contents
+––––––––––––––––––––––––––––––––––––––––––––––––––
+
+- Buttons
+- Brand Styles
+
+*/
+
+/* Buttons
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+
+.button,
+button {
+  display: inline-block;
+  text-decoration: none;
+  height: 48px;
+  text-align: center;
+  vertical-align: middle;
+  font-size: 18px;
+  width: 300px;
+  font-weight: 700;
+  line-height: 48px;
+  letter-spacing: 0.1px;
+  white-space: wrap;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.button:hover {
+  filter: brightness(90%);
+}
+
+/* Brand Icons
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+
+.icon {
+  padding: 0px 8px 3.5px 0px;
+  vertical-align: middle;
+  width: 20px;
+  height: 20px;
+}
+
+/* Brand Styles
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+
+/* Default */
+.button.button-default {
+  color: #ffffff;
+  background-color: #0085ff;
+}
+
+/* Discord */
+.button.button-discord {
+  color: #ffffff;
+  background-color: #5865f2;
+}
+
+/* Facebook */
+.button.button-facebook {
+  color: #ffffff;
+  background-color: #1877f2;
+}
+
+/* Facebook Messenger */
+.button.button-facebookmessenger {
+  color: #ffffff;
+  background-image: linear-gradient(
+  25deg,
+  #0099ff,
+  #5f5dff,
+  #a033ff,
+  #c740cc,
+  #ff5280,
+  #ff7061
+);
+}
+
+/* Figma */
+.button.button-figma {
+  color: #ffffff;
+  background-color: #000000;
+}
+
+/* Github */
+.button.button-github {
+  color: #ffffff;
+  background-color: #000000;
+}
+
+/* Goodreads */
+.button.button-goodreads {
+  color: #333333;
+  background-color: #f3f1e6;
+}
+
+/* Instagram */
+.button.button-instagram {
+  color: #ffffff;
+  background-image: linear-gradient(-135deg, #1400c8, #b900b4, #f50000);
+}
+
+/* Kit */
+.button.button-kit {
+  color: #ffffff;
+  background-color: #000000;
+}
+
+/* Letterboxd */
+.button.button-letterboxd {
+  color: #ffffff;
+  background-color: #2c3440;
+}
+
+/* LinkedIn */
+.button.button-linkedin {
+  color: #ffffff;
+  background-color: #2867b2;
+}
+
+/* Medium */
+.button.button-medium {
+  color: #ffffff;
+  background-color: #000000;
+}
+
+/* Micro.blog */
+.button.button-microblog {
+  color: #ffffff;
+  background-color: #fd9927;
+}
+
+/* Pinterest */
+.button.button-pinterest {
+  color: #000000;
+  background-color: #ffe2eb;
+}
+
+/* Producthunt */
+.button.button-producthunt {
+  color: #da552f;
+  border-style: solid;
+  border-color: #da552f;
+  border-width: 2px;
+  background-color: #ffffff;
+}
+
+/* Reddit */
+.button.button-reddit {
+  color: #000000;
+  background-color: #d7dfe2;
+}
+
+/* Skoob */
+.button.button-skoob {
+  color: #ffffff;
+  background-color: #3189c8;
+}
+
+/* Snapchat */
+.button.button-snapchat {
+  color: #000000;
+  background-color: #fffc00;
+}
+
+/* SoundCloud */
+.button.button-soundcloud {
+  color: #ffffff;
+  background-color: #ff5500;
+}
+
+/* Spotify */
+.button.button-spotify {
+  color: #191414;
+  background-color: #1db954;
+}
+
+/* Steam */
+.button.button-steam {
+  color: #ffffff;
+  background-color: #171a21;
+}
+
+/* Telegram */
+.button.button-telegram {
+  color: #ffffff;
+  background-color: #3faee8;
+}
+
+/* TikTok */
+.button.button-tiktok {
+  color: #ffffff;
+  background-color: #000000;
+}
+
+/* Tumblr */
+.button.button-tumblr {
+  color: #ffffff;
+  background-color: #131313;
+}
+
+/* Twitch */
+.button.button-twitch {
+  color: #ffffff;
+  background-color: #9146ff;
+}
+
+/* Twitter */
+.button.button-twitter {
+  color: #ffffff;
+  background-color: #1da1f2;
+}
+
+
+/* Mastodon */
+.button.button-mastodon {
+  color: #ffffff;
+  background-color: #0e68a0;
+}
+
+/* Vimeo */
+.button.button-vimeo {
+  color: #ffffff;
+  background-color: #1ab7ea;
+}
+
+/* YouTube */
+.button.button-youtube {
+  color: #ffffff;
+  background-color: #000000;
+}
+
+
+/* Wordpress */
+.button.button-wordpress {
+  color: #ffffff;
+  background-color: #21759b;
+}
+
+/* WhatsApp */
+.button.button-whatsapp {
+  color: #ffffff;
+  background-color: #2db842;
+}
+
+/* Strava */
+.button.button-strava {
+  color: #ffffff;
+  background-color: #fd5000;
+}
+
+/* Bluesky */
+.button.button-bluesky {
+  color: #000000;
+  background-color: #F3F9FF;
+  border: 1px solid #212121;
+}
+.button.button-bluesky:hover,
+.button.button-bluesky:focus {
+  filter: brightness(90%);
+}
+
+/* Buy Me a Coffee */
+.button.button-buymeacoffee {
+  color: #000000;
+  background-color: #FFDD00;
+}
+
+/* GitLab */
+.button.button-gitlab {
+  color: #8c929d;
+  background-color: #FFFFFF;
+}
+
+/* Patreon */
+.button.button-patreon {
+  color: #FFFFFF;
+  background-color: #FF424D;
+}
+
+/* Dev.to */
+.button.button-devto {
+  color: #000;
+  background-color: #fff;
+}
+
+/* Paypal */
+.button.button-paypal {
+  color: #ffffff;
+  background-color: #1F264F;
+}
+
+/* Slack */
+.button.button-slack {
+  color: #fff;
+  background-color: #4a154b;
+}
+
+/* Stack Overflow */
+.button.button-stackoverflow {
+  color: #000;
+  background-color: #f8f9f9;
+  font-weight: 100;
+}
+
+.button.button-stackoverflow:after {
+  content: "overflow";
+  font-weight: 700;
+}
+
+/* Last.fm */
+.button.button-lastfm {
+  color: #ffffff;
+  background-color: #000101;
+}
+
+/* Gitea */
+.button.button-gitea {
+  color: #000;
+  background-color: #ffffff;
+}
+
+/* Polywork */
+.button.button-polywork {
+  color: #fff;
+  background-color: #543DE0;
+}
+
+/* Signal */
+.button.button-signal {
+  color: #000;
+  background-color: #fff;
+}
+
+/* Untappd */
+.button.button-untappd {
+  color: #000;
+  background-color: #FFCE0D;
+}
+
+/* Instant Gaming */
+.button.button-instantgaming {
+  color: #f50;
+  background-color: #000;
+}
+
+/* ghost */
+.button.button-ghost {
+  color: #000;
+  background-color: #fff;
+}
+
+/* trakt */
+.button.button-trakt {
+  color: #fff;
+  background-color: #000;
+}
+
+/* CashApp */
+.button.button-cashapp {
+  color: #000;
+  background-color: #fff;
+}
+
+/* Teespring */
+.button.button-teespring {
+  color: #eb4373;
+  background-color: #2f2464;
+}
+
+/* Xing */
+.button.button-xing {
+  color: #0b6162;
+  background-color: #c6f16d;
+}
+
+/* Keybase */
+.button.button-keybase {
+  color: #fff;
+  background-color: #3663ea;
+}
+
+/* Onlyfans */
+.button.button-onlyfans {
+  color: #008ccf;
+  background-color: #fff;
+}
+
+/* Session */
+.button.button-session {
+  color: #04f383;
+  background-color: #000;
+}
+
+/* Threema */
+.button.button-threema {
+  color: #000;
+  background-color: #fff;
+}
+
+/* Streamlabs */
+.button.button-streamlabs {
+  color: #000;
+  background-color: #88f4d4;
+}
+
+/* Privatebin */
+.button.button-privatebin {
+  color: #f19d13;
+  background-color: #000;
+}
+
+/* Amazon  */
+.button.button-amazon {
+  color: #000;
+  background-color: #fff;
+}
+
+/* Apple Music  */
+.button.button-applemusic {
+  color: #fa425a;
+  background-color: #fff;
+}
+
+/* YouTube Music */
+.button.button-youtubemusic {
+  color: #ffffff;
+  background-color: #000000;
+}
+
+/* Venmo */
+.button.button-venmo {
+  color: #ffffff;
+  background-color: #3d95ce;
+}
+
+/* Status */
+.button.button-status {
+  color: #000;
+  background-color: #fff;
+}
+
+/* [matrix]  */
+.button.button-matrix {
+  color: #333333;
+  background-color: #fff;
+}
+
+/* Anilist  */
+.button.button-anilist {
+  color: #02a0f2;
+  background-color: #1c242e;
+}
+
+/* Gitbucket */
+.button.button-gitbucket {
+  color: #000;
+  background-color: #fff
+}
+
+/* Shazam */
+.button.button-shazam {
+  color: #fff;
+  background-color: #1f5bfc
+}
+
+/* Flickr */
+.button.button-flickr {
+  color: #fff;
+  background-color: #000
+}
+
+/* TPDB */
+.button.button-tpdb {
+  color: #fff;
+  background-color: #FA6940
+}
+
+/* osu! */
+.button.button-osu {
+  color: #fff;
+  background-color: #FF8EE6
+}
+
+/* Line */
+.button.button-lineMessenger {
+  color: #fff;
+  background-color: #02df45
+}
+
+
+/* kakaoTalk */
+.button.button-kakaoTalk {
+  color: #000;
+  background-color: #fae513
+}
+
+
+/* DesignByHumans */
+.button.button-designByHumans {
+  color: #000;
+  background-color: #fff
+}
+
+/* Dockerhub */
+.button.button-dockerhub {
+  color: #099cec;
+  background-color: #fff
+}
+
+/* Vero */
+.button.button-vero {
+  color: #fff;
+  background-color: #000
+}
+
+/* MyAnimeList */
+.button.button-myAnimeList {
+  color: #133a95;
+  background-color: #fff
+}
+
+/* 500px */
+.button.button-500px {
+  color: #000;
+  background-color: #fff
+}
+
+/* jetphotos */
+.button.button-jetphotos {
+  color: #ffffff;
+  background-color: #000000;
+}
+
+/* substack */
+.button.button-substack {
+  color: #000;
+  background-color: #fff;
+}
+
+/* printables */
+.button.button-printables {
+  color: #000;
+  background-color: #eb5405;
+}
+
+/* serializd */
+.button.button-serializd {
+  color: #57c2ad;
+  background-color: #0a0c0e;
+}
+
+/* threads */
+.button.button-threads {
+  color: #ffffff;
+  background-color: #000000;
+}
+
+/* lemmy */
+.button.button-lemmy {
+  color: #000000;
+  background-color: #ffffff;
+}
+
+/* pixelfed */
+.button.button-pixelfed {
+  color: #000000;
+  background-color: #ffffff;
+}
+
+/* vrchat */
+.button.button-vrchat {
+  color: #000000;
+  background-color: #ffffff;
+}
+
+/* X */
+.button.button-x {
+  color: #000000;
+  background-color: #000000;
+}
+
+/* Codewars */
+.button.button-codewars {
+  color: #df605c;
+  background-color: #222327;
+}
+
+/* Apple Podcasts */
+.button.button-apple-podcasts {
+  color: #ffffff;
+  background-color: #000000;
+  border: 1px solid #FFFFFF;
+}
+.button.button-apple-podcasts:hover,
+.button.button-apple-podcasts:focus {
+  filter: brightness(90%);
+}
+
+/* Google Podcasts */
+.button.button-google-podcasts {
+  color: #000000;
+  background-color: #FFFFFF;
+  border: 1px solid #212121;
+}
+.button.button-google-podcasts:hover,
+.button.button-google-podcasts:focus {
+  filter: brightness(90%);
+}
+
+/* Pocket Casts */
+.button.button-pocket-casts {
+  color: #000000;
+  border-style: solid;
+  border-color: #b8c3c9;
+  border-width: 1px;
+  background-color: #ffffff;
+}
+
+/* Overcast */
+.button.button-overcast {
+  color: #000000;
+  border-style: solid;
+  border-color: #b8c3c9;
+  border-width: 1px;
+  background-color: #ffffff;
+}
+
+/* RSS */
+.button.button-rss {
+  color: #ffffff;
+  background-color: #FF9800;
+}
+
+/* Audius */
+.button.button-audius {
+  color: #000000;
+  background-color: #ffffff;
+}
+
+/* Bandcamp */
+.button.button-bandcamp {
+  color: #11AADD;
+  background-color: #ffffff;
+}
+
+/* Forgejo */
+.button.button-forgejo {
+  color: #C2410C;
+  background-color: #ffffff;
+}
+
+/* Orcid */
+.button.button-orcid {
+  color: #A6CE39;
+  background-color: #ffffff;
+}
+
+/* Credly */
+.button.button-credly {
+  color: #FF6A00;
+  background-color: #ffffff;
+}
+
+/* Semantic Scholar */
+.button.button-semanticscholar {
+  color: #000000;
+  background-color: #ffffff;
+}
+
+/* Google Scholar */
+.button.button-googlescholar {
+  color: #356AC3;
+  background-color: #ffffff;
+}
+
+/* Simplex */
+.button.button-simplex {
+  color: #07B4B9;
+  background-color: #ffffff;
+}
+
+/* Mixcloud */
+.button.button-mixcloud {
+  color: #000000;
+  background-color: #ffffff;
+}
+
+/* Internet Archive */
+.button.button-internetarchive {
+  color: #000000;
+  background-color: #ffff;
+}
+
+/* Google Maps */
+.button.button-googlemaps {
+  color: #4482f1;
+  background-color: #fff;
+}
+
+/* Tidal */
+.button.button-tidal {
+  color: #000000;
+  background-color: #fff;
+}
+
+/* TheStoryGraph */
+.button.button-thestorygraph {
+  color: #ffff;
+  background-color: #18949c;
+}
+
+/* Geocaching */
+.button.button-geocaching {
+  color: #000000;
+  background-color: #ffff;
+}
+
+/* Neocities */
+.button.button-neocities {
+  color: #ffff;
+  background-color: #65a0ad;
+}
+
+/*  Dreamwidth */
+.button.button-dreamwidth {
+  color: #C1272D;
+  background-color: #ffff;
+}
+
+/* Spacehey */
+.button.button-spacehey {
+  color: #204cdc;
+  background-color: #ffff;
+}
+
+/* Viber */
+.button.button-viber {
+  color: #583cbc;
+  background-color: #ffff;
+}
+
+/* Pillowfort */
+.button.button-pillowfort {
+  color: #000000;
+  background-color: #ffff;
+}
+
+/* Makerworld */
+.button.button-makerworld {
+  color: #000000;
+  background-color: #ffff;
+}
+
