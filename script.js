@@ -219,7 +219,7 @@ function closeShareModal() {
 // Share buttons
 shareWhatsapp.addEventListener('click', (e) => {
     e.preventDefault();
-    const shareText = `🌱 ${pageTitle}\n\nAlimentação saudável e caseira feita com muito carinho! 💚\n\nConfira nossos links e faça seu pedido:\n${currentURL}`;
+    const shareText = `Leve na Marmita\n\nComida caseira e saudável feita com muito carinho!\n\nPeça pelo iFood, veja nosso cardápio completo e confira opções personalizadas para sua dieta.\n\n${currentURL}`;
     const whatsappURL = `https://wa.me/?text=${encodeURIComponent(shareText)}`;
     window.open(whatsappURL, '_blank');
 });
@@ -232,7 +232,7 @@ shareFacebook.addEventListener('click', (e) => {
 
 shareTwitter.addEventListener('click', (e) => {
     e.preventDefault();
-    const tweetText = `🌱 ${pageTitle} - Alimentação saudável e caseira! 💚`;
+    const tweetText = `Leve na Marmita - Comida caseira e saudável!`;
     const twitterURL = `https://twitter.com/intent/tweet?url=${encodeURIComponent(currentURL)}&text=${encodeURIComponent(tweetText)}`;
     window.open(twitterURL, '_blank');
 });
