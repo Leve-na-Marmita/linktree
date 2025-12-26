@@ -117,7 +117,7 @@ Características:
 - Fale conosco
 - Dúvidas? Fale com a gente
 
-### Dietas Personalizadas
+### Personalizados
 - Envie aqui sua dieta
 - Personalizamos ela para você
 

@@ -7,11 +7,11 @@
     <meta name="keywords" content="marmita, comida saudável, alimentação caseira, delivery, São Paulo">
     <meta name="author" content="Leve na Marmita">
 
-    <title>Leve na Marmita | Links</title>
+    <title>Leve na Marmita</title>
 
     <!-- Favicon -->
-    <link rel="icon" type="image/jpeg" href="src/iconi.jpeg">
-    <link rel="apple-touch-icon" href="src/iconi.jpeg">
+    <link rel="icon" type="image/jpeg" href="src/iconi-2.jpeg">
+    <link rel="apple-touch-icon" href="src/iconi-2.jpeg">
 
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -23,10 +23,35 @@
 
     <!-- Stylesheet -->
     <link rel="stylesheet" href="style.css">
+
+    <!-- QR Code Library -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
 </head>
 <body>
+    <!-- Loading Screen -->
+    <div class="loading-screen" id="loadingScreen">
+        <div class="loading-content">
+            <img src="src/iconi.jpeg" alt="Logo" class="loading-logo">
+            <div class="loading-spinner"></div>
+            <p class="loading-text">Carregando...</p>
+        </div>
+    </div>
+
     <!-- Background Decoration -->
     <div class="bg-decoration"></div>
+
+    <!-- Particles Background -->
+    <canvas id="particles-canvas"></canvas>
+
+    <!-- Theme Toggle & Share Button -->
+    <div class="top-controls">
+        <button class="theme-toggle" id="themeToggle" aria-label="Alternar tema">
+            <i class="fas fa-moon"></i>
+        </button>
+        <button class="share-btn" id="shareBtn" aria-label="Compartilhar">
+            <i class="fas fa-share-alt"></i>
+        </button>
+    </div>
 
     <!-- Main Container -->
     <div class="container">
@@ -55,9 +80,30 @@
             </a>
         </div>
 
-        <!-- Banner Principal -->
-        <div class="banner-container">
-            <img src="src/foto-1.jpeg" alt="Marmitas Saudáveis" class="banner">
+        <!-- Banner Slider -->
+        <div class="banner-slider">
+            <div class="slider-wrapper">
+                <div class="slide active">
+                    <img src="src/galeria/foto-1.jpeg" alt="Marmitas Saudáveis" loading="lazy">
+                </div>
+                <div class="slide">
+                    <img src="src/galeria/foto-2.jpeg" alt="Alimentação Balanceada" loading="lazy">
+                </div>
+                <div class="slide">
+                    <img src="src/galeria/foto-3.jpeg" alt="Comida Caseira" loading="lazy">
+                </div>
+            </div>
+            <button class="slider-btn prev" aria-label="Anterior">
+                <i class="fas fa-chevron-left"></i>
+            </button>
+            <button class="slider-btn next" aria-label="Próximo">
+                <i class="fas fa-chevron-right"></i>
+            </button>
+            <div class="slider-dots">
+                <span class="dot active" data-slide="0"></span>
+                <span class="dot" data-slide="1"></span>
+                <span class="dot" data-slide="2"></span>
+            </div>
         </div>
 
         <!-- Links Section -->
@@ -102,19 +148,6 @@
                 <div class="link-content">
                     <h3>Encomendas Especiais</h3>
                     <p>Para eventos e ocasiões</p>
-                </div>
-                <div class="link-arrow">
-                    <i class="fas fa-chevron-right"></i>
-                </div>
-            </a>
-
-            <a href="https://levenamarmita.com.br/personalizada" target="_blank" rel="noopener noreferrer" class="link-card">
-                <div class="link-icon">
-                    <i class="fas fa-utensils"></i>
-                </div>
-                <div class="link-content">
-                    <h3>Marmita Personalizada</h3>
-                    <p>Monte do seu jeito</p>
                 </div>
                 <div class="link-arrow">
                     <i class="fas fa-chevron-right"></i>
@@ -179,11 +212,24 @@
                 </div>
             </a>
 
-            <!-- Dietas Personalizadas -->
+            <!-- Personalizados -->
             <div class="section-title">
                 <i class="fas fa-apple-alt"></i>
-                <span>Dietas Personalizadas</span>
+                <span>Personalizados</span>
             </div>
+
+            <a href="https://levenamarmita.com.br/personalizada" target="_blank" rel="noopener noreferrer" class="link-card">
+                <div class="link-icon">
+                    <i class="fas fa-utensils"></i>
+                </div>
+                <div class="link-content">
+                    <h3>Marmita Personalizada</h3>
+                    <p>Monte do seu jeito</p>
+                </div>
+                <div class="link-arrow">
+                    <i class="fas fa-chevron-right"></i>
+                </div>
+            </a>
 
             <a href="https://levenamarmita.com.br/dieta" target="_blank" rel="noopener noreferrer" class="link-card">
                 <div class="link-icon">
@@ -258,25 +304,65 @@
         </footer>
     </div>
 
-    <!-- Animation Script -->
-    <script>
-        // Smooth scroll reveal animation
-        const observerOptions = {
-            threshold: 0.1,
-            rootMargin: '0px 0px -50px 0px'
-        };
+    <!-- Lightbox Modal -->
+    <div class="lightbox" id="lightbox">
+        <button class="lightbox-close" aria-label="Fechar">
+            <i class="fas fa-times"></i>
+        </button>
+        <img src="" alt="Imagem ampliada" id="lightboxImg">
+    </div>
 
-        const observer = new IntersectionObserver(function(entries) {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.classList.add('fade-in');
-                }
-            });
-        }, observerOptions);
+    <!-- Share Modal -->
+    <div class="share-modal" id="shareModal">
+        <div class="share-content">
+            <button class="share-close" aria-label="Fechar">
+                <i class="fas fa-times"></i>
+            </button>
+            <h3>Compartilhar</h3>
+            <div class="qr-code-container">
+                <div id="qrcode"></div>
+                <p>Escaneie o QR Code</p>
+            </div>
 
-        document.querySelectorAll('.link-card, .section-title, .banner-container').forEach(el => {
-            observer.observe(el);
-        });
-    </script>
+            <div class="link-preview">
+                <span class="link-text" id="linkText"></span>
+                <button class="copy-btn" id="copyLinkBtn" title="Copiar link">
+                    <i class="fas fa-copy"></i>
+                </button>
+            </div>
+
+            <div class="share-buttons-list">
+                <a href="#" class="share-bar whatsapp" id="shareWhatsapp">
+                    <div class="share-bar-icon">
+                        <i class="fab fa-whatsapp"></i>
+                    </div>
+                    <span>Compartilhar no WhatsApp</span>
+                    <i class="fas fa-chevron-right"></i>
+                </a>
+                <a href="#" class="share-bar facebook" id="shareFacebook">
+                    <div class="share-bar-icon">
+                        <i class="fab fa-facebook"></i>
+                    </div>
+                    <span>Compartilhar no Facebook</span>
+                    <i class="fas fa-chevron-right"></i>
+                </a>
+                <a href="#" class="share-bar twitter" id="shareTwitter">
+                    <div class="share-bar-icon">
+                        <i class="fab fa-twitter"></i>
+                    </div>
+                    <span>Compartilhar no Twitter</span>
+                    <i class="fas fa-chevron-right"></i>
+                </a>
+            </div>
+
+            <div class="copy-feedback" id="copyFeedback">
+                <i class="fas fa-check-circle"></i>
+                Link copiado!
+            </div>
+        </div>
+    </div>
+
+    <!-- Main JavaScript -->
+    <script src="script.js"></script>
 </body>
 </html>
