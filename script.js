@@ -219,7 +219,8 @@ function closeShareModal() {
 // Share buttons
 shareWhatsapp.addEventListener('click', (e) => {
     e.preventDefault();
-    const whatsappURL = `https://wa.me/?text=${encodeURIComponent(pageTitle + ' - ' + currentURL)}`;
+    const shareText = `🌱 ${pageTitle}\n\nAlimentação saudável e caseira feita com muito carinho! 💚\n\nConfira nossos links e faça seu pedido:\n${currentURL}`;
+    const whatsappURL = `https://wa.me/?text=${encodeURIComponent(shareText)}`;
     window.open(whatsappURL, '_blank');
 });
 
@@ -231,7 +232,8 @@ shareFacebook.addEventListener('click', (e) => {
 
 shareTwitter.addEventListener('click', (e) => {
     e.preventDefault();
-    const twitterURL = `https://twitter.com/intent/tweet?url=${encodeURIComponent(currentURL)}&text=${encodeURIComponent(pageTitle)}`;
+    const tweetText = `🌱 ${pageTitle} - Alimentação saudável e caseira! 💚`;
+    const twitterURL = `https://twitter.com/intent/tweet?url=${encodeURIComponent(currentURL)}&text=${encodeURIComponent(tweetText)}`;
     window.open(twitterURL, '_blank');
 });
 
